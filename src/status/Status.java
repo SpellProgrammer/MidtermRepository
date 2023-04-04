@@ -21,13 +21,12 @@ public class Status {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+    public static void main(String[] args){
+        Scanner in =new Scanner(System.in);
+        System.out.println("Enter the user status code (zero,one,two,three) in string");
+        int code = in.nextInt()-1;
+        StausUser t= new StausUser(StausUser.cd.values()[code]);
+        t.statusDetail(t); 
     }
     
 }
